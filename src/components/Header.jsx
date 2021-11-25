@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
-
+import { GiHamburgerMenu } from 'react-icons/gi';
 function Header() {
+  const [clicked, SetClicked] = useState(false);
   const location = useLocation();
+  const handleClick = () => {
+    SetClicked((clicked) => !clicked);
+  };
   return (
     <NavBox toblack={location.pathname === '/contact'}>
       <NavLogo to="/">종로4가</NavLogo>
-      <NavUl>
+      <GiHamburgerMenu onClick={handleClick} />
+      <NavUl clicked={clicked}>
         <li>
           <NavLink to="/" selected={location.pathname === '/'}>
             Home
@@ -46,6 +51,17 @@ const NavBox = styled.div`
   align-items: center;
   width: 100vw;
   height: 10vh;
+  & > svg {
+    position: absolute;
+    top: 50%;
+    right: 10vw;
+    transform: translateY(-32%);
+    font-size: 1.5rem;
+    display: none;
+    @media screen and (max-width: 550px) {
+      display: block;
+    }
+  }
   & > * {
     ${(props) =>
       props.toblack
@@ -54,13 +70,21 @@ const NavBox = styled.div`
           `
         : css`
             color: #ffffff;
-          `}/* color: #ffffff; */
+          `}
+  }
+  & > ul > * {
+    @media screen and (max-width: 550px) {
+      color: #ffffff;
+    }
   }
 `;
 const NavLogo = styled(Link)`
   font-size: 1.5rem;
   font-weight: 800;
   margin-left: 17vw;
+  @media screen and (max-width: 850px) {
+    margin-left: 10vw;
+  }
 `;
 const NavUl = styled.ul`
   display: flex;
@@ -70,6 +94,22 @@ const NavUl = styled.ul`
   width: 30%;
   margin-left: auto;
   margin-right: 17vw;
+  @media screen and (max-width: 550px) {
+    position: absolute;
+    flex-direction: column;
+    top: 8vh;
+    right: 1px;
+    margin-right: 0;
+    background-color: rgba(10, 28, 50, 0.8);
+    border-radius: 10px;
+    min-height: 15rem;
+    display: none;
+    ${(props) =>
+      props.clicked &&
+      css`
+        display: flex;
+      `}
+  }
   & > li {
     padding: 1em;
   }

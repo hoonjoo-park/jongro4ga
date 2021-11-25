@@ -37,4 +37,7 @@ const MapContainer = styled.div`
   height: 100%;
   border-radius: 5px;
   box-shadow: 0px 10px 20px -5px rgb(0 0 0 / 25%);
+  @media screen and (max-width: 550px) {
+    height: 80%;
+  }
 `;

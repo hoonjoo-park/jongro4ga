@@ -67,6 +67,13 @@ const BannerLi = styled.li`
     top: 35%;
     left: 17%;
     color: #ffffff;
+    @media screen and (max-width: 850px) {
+      font-size: 2.5rem;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 2rem;
+      left: 10vw;
+    }
   }
   & > p {
     z-index: 2;
@@ -77,6 +84,16 @@ const BannerLi = styled.li`
     font-size: 1.5rem;
     font-weight: 500;
     color: #ffffff;
+    @media screen and (max-width: 850px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 1rem;
+      top: 43%;
+      left: 10vw;
+      width: 70%;
+      text-align: justify;
+    }
   }
   & > div {
     background-position: center;

@@ -11,7 +11,9 @@ function About() {
       </AboutContainer>
       <DescriptionContainer>
         <DescriptionBox>
-          <LeftBox></LeftBox>
+          <LeftBox>
+            <div></div>
+          </LeftBox>
           <RightBox>
             <hr />
             <h3>예지동에서 시작된 역사</h3>
@@ -49,6 +51,12 @@ const AboutContainer = styled.div`
     color: #ffffff;
     font-size: 3.5rem;
     font-weight: 900;
+    @media screen and (max-width: 850px) {
+      font-size: 3rem;
+    }
+    @media screen and (max-width: 550px) {
+      font-size: 2rem;
+    }
   }
   & > h3:nth-child(1) {
     margin-bottom: 2rem;
@@ -80,19 +88,48 @@ const DescriptionBox = styled.div`
   justify-content: center;
   height: 80%;
   width: 70%;
+  @media screen and (max-width: 850px) {
+    width: 85%;
+  }
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 const LeftBox = styled.div`
-  flex-basis: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 45%;
   height: 80%;
-  background-image: url(${Clothes});
-  margin-left: 2.5%;
-  margin-right: 5%;
-  border-radius: 5px;
-  box-shadow: 0px 10px 20px -5px rgb(0 0 0 / 25%);
+  @media screen and (max-width: 550px) {
+    width: 100%;
+  }
+  & > div {
+    background-image: url(${Clothes});
+    width: 75%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px -5px rgb(0 0 0 / 25%);
+    @media screen and (max-width: 1200px) {
+      height: 70%;
+    }
+    @media screen and (max-width: 850px) {
+      width: 90%;
+      height: 70%;
+    }
+    @media screen and (max-width: 550px) {
+      width: 95%;
+      height: 100%;
+    }
+  }
 `;
 const RightBox = styled.div`
-  flex-basis: 70%;
-  padding-left: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 55%;
   & > hr {
     margin: 1.5rem 0;
     width: 10%;
@@ -106,11 +143,17 @@ const RightBox = styled.div`
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 2.5rem;
+    @media screen and (max-width: 550px) {
+      font-size: 1.7rem;
+    }
   }
   & > p {
     font-size: 1.1rem;
     line-height: 1.8rem;
     width: 65%;
     text-align: justify;
+    @media screen and (max-width: 850px) {
+      width: 90%;
+    }
   }
 `;

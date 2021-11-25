@@ -45,11 +45,21 @@ const CategoriesContainer = styled.div`
   height: 100vh;
   padding: 5% 0;
   background-color: #f7f7f7;
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: 550px) {
+    padding: 20% 0;
+    justify-content: flex-start;
+  }
   & > h3 {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 3.5rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: 550px) {
+      font-size: 1.7rem;
+    }
   }
 `;
 const NavBox = styled.div`
@@ -60,6 +70,12 @@ const NavBox = styled.div`
   & > span {
     font-weight: 600;
     cursor: pointer;
+    @media screen and (max-width: 550px) {
+      font-size: 0.9rem;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    width: 50%;
   }
 `;
 
@@ -70,6 +86,20 @@ const ImageBox = styled.div`
   width: 70%;
   height: 100%;
   gap: 2rem;
+  @media screen and (max-width: 1200px) {
+    height: 60%;
+    gap: 1rem;
+  }
+  @media screen and (max-width: 850px) {
+    height: 50%;
+  }
+  @media screen and (max-width: 550px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+  }
   & > div {
     width: 100%;
     height: 100%;

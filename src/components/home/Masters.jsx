@@ -51,11 +51,17 @@ const MasterContainer = styled.div`
   height: 100vh;
   background-color: #ffffff;
   padding: 5% 0;
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+  }
   & > h3 {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 5rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: 550px) {
+      font-size: 1.7rem;
+    }
   }
 `;
 const GridBox = styled.div`
@@ -66,6 +72,19 @@ const GridBox = styled.div`
   height: 100%;
   justify-content: center;
   gap: 2rem;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 65%;
+  }
+  @media screen and (max-width: 850px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 550px) {
+    width: 95%;
+    gap: 0.5rem;
+  }
 `;
 
 const GridItem = styled.div`
@@ -85,6 +104,9 @@ const GridItem = styled.div`
     transform: translateX(-30%);
     opacity: 0;
     transition: all 0.15s ease-in;
+    @media screen and (max-width: 550px) {
+      font-size: 1rem;
+    }
   }
   & > p {
     z-index: 2;
@@ -93,6 +115,11 @@ const GridItem = styled.div`
     opacity: 0;
     transition: all 0.15s ease-in;
     font-weight: 500;
+    @media screen and (max-width: 550px) {
+      width: 70%;
+      text-align: center;
+      font-size: 0.3rem;
+    }
   }
   &:hover > div {
     filter: grayscale(0%);

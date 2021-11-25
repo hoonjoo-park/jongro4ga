@@ -7,6 +7,7 @@ const globalStyle = createGlobalStyle`
         box-sizing : border-box;
     }
     html {
+        width : 100vw;
         line-height: 1.15;
         -webkit-text-size-adjust: 100%;
         @media screen and (max-width : 1400px){

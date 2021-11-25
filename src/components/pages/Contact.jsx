@@ -36,18 +36,28 @@ const ContactContainer = styled.div`
     position: absolute;
     bottom: 7%;
     color: #5e5e5ed1;
+    @media screen and (max-width: 550px) {
+      bottom: 15%;
+    }
   }
 `;
 const ContactBox = styled.div`
   display: flex;
   flex-direction: column;
   width: 66%;
+  @media screen and (max-width: 550px) {
+    width: 95%;
+    justify-content: center;
+  }
   & > h3 {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 3.5rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    @media screen and (max-width: 550px) {
+      font-size: 1.7rem;
+    }
   }
 `;
 const BottomBox = styled.div`

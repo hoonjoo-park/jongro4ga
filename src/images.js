@@ -20,6 +20,13 @@ import Tailor2 from './images/tailor2.jpeg';
 import Hanbok from './images/hanbok.jpeg';
 import Jagae from './images/jagae.jpeg';
 import Jagae2 from './images/jagae2.jpeg';
+import Suits from './images/suits.jpeg';
+import WatchRepair2 from './images/watchRepair2.jpeg';
+import Accessory from './images/accessories.jpeg';
+import AccessoryPortrait from './images/accessoryPortrait.jpeg';
+import TailorPortrait from './images/tailorPortrait.jpeg';
+import HanbokPortrait from './images/hanbokPortrait.jpeg';
+import WatchRepairPortrait from './images/watchRepairPortrait.jpeg';
 
 export {
   BasementStore,
@@ -44,4 +51,11 @@ export {
   Hanbok,
   Jagae,
   Jagae2,
+  Suits,
+  WatchRepair2,
+  Accessory,
+  AccessoryPortrait,
+  TailorPortrait,
+  HanbokPortrait,
+  WatchRepairPortrait,
 };
