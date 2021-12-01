@@ -27,6 +27,8 @@ import AccessoryPortrait from './images/accessoryPortrait.jpeg';
 import TailorPortrait from './images/tailorPortrait.jpeg';
 import HanbokPortrait from './images/hanbokPortrait.jpeg';
 import WatchRepairPortrait from './images/watchRepairPortrait.jpeg';
+import SisulLogo from './images/sisul.png';
+import ISeoulU from './images/iseoulu.svg';
 
 export {
   BasementStore,
@@ -58,4 +60,6 @@ export {
   TailorPortrait,
   HanbokPortrait,
   WatchRepairPortrait,
+  SisulLogo,
+  ISeoulU,
 };

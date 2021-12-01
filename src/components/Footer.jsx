@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { SisulLogo, ISeoulU } from '../images';
 
 function Footer() {
   return (
@@ -9,16 +10,8 @@ function Footer() {
         <span>Copy Right 2021 © By Hoonjoo Park All Rights Reserved</span>
       </LeftBox>
       <RightBox>
-        <img
-          src={
-            'https://w.namu.la/s/5b26e369ed6e0344d27d9cdfa8c3bc67ba9c235c88cd04ff6eb833ba2704b939c59d49b746b6f8f6d82d35bb779e253be365a2ae8ebeb2a7cb63bcf1d1f5280dfe5059a649a52b5551b42e26bdee052ff4f6f8b6cc2ed058ce3eab543960edb6'
-          }
-          alt="right1"
-        ></img>
-        <img
-          src={'https://www.sisul.or.kr/open_content/main/images/ci1.png'}
-          alt="right2"
-        ></img>
+        <img src={ISeoulU} alt="right1"></img>
+        <img src={SisulLogo} alt="right2"></img>
       </RightBox>
     </FooterContainer>
   );
